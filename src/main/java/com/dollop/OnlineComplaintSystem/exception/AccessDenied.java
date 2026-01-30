@@ -1,34 +1,33 @@
 package com.dollop.OnlineComplaintSystem.exception;
 
-public class ResourceNotFoundException extends RuntimeException {
+public class AccessDenied extends RuntimeException {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public ResourceNotFoundException() {
+	public AccessDenied() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public ResourceNotFoundException(String message, Throwable cause, boolean enableSuppression,
-			boolean writableStackTrace) {
+	public AccessDenied(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
 		super(message, cause, enableSuppression, writableStackTrace);
 		// TODO Auto-generated constructor stub
 	}
 
-	public ResourceNotFoundException(String message, Throwable cause) {
+	public AccessDenied(String message, Throwable cause) {
 		super(message, cause);
 		// TODO Auto-generated constructor stub
 	}
 
-	public ResourceNotFoundException(String message) {
+	public AccessDenied(String message) {
 		super(message);
 		// TODO Auto-generated constructor stub
 	}
 
-	public ResourceNotFoundException(Throwable cause) {
+	public AccessDenied(Throwable cause) {
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}

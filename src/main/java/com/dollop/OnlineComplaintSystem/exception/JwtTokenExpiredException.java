@@ -1,34 +1,34 @@
 package com.dollop.OnlineComplaintSystem.exception;
 
-public class ResourceNotFoundException extends RuntimeException {
+public class JwtTokenExpiredException extends RuntimeException{
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public ResourceNotFoundException() {
+	public JwtTokenExpiredException() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public ResourceNotFoundException(String message, Throwable cause, boolean enableSuppression,
+	public JwtTokenExpiredException(String message, Throwable cause, boolean enableSuppression,
 			boolean writableStackTrace) {
 		super(message, cause, enableSuppression, writableStackTrace);
 		// TODO Auto-generated constructor stub
 	}
 
-	public ResourceNotFoundException(String message, Throwable cause) {
+	public JwtTokenExpiredException(String message, Throwable cause) {
 		super(message, cause);
 		// TODO Auto-generated constructor stub
 	}
 
-	public ResourceNotFoundException(String message) {
+	public JwtTokenExpiredException(String message) {
 		super(message);
 		// TODO Auto-generated constructor stub
 	}
 
-	public ResourceNotFoundException(Throwable cause) {
+	public JwtTokenExpiredException(Throwable cause) {
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}

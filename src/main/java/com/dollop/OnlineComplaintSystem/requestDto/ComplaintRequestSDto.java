@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ComplaintRequestSDto {
-	private Long userId;
 	private String category;
 	private String description;
 

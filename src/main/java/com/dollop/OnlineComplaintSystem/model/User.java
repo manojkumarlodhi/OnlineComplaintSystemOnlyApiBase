@@ -3,6 +3,8 @@ package com.dollop.OnlineComplaintSystem.model;
 import java.sql.Date;
 import java.time.LocalDateTime;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import com.dollop.OnlineComplaintSystem.enums.Role;
 
 import jakarta.persistence.Column;
@@ -34,7 +36,8 @@ public class User {
 	private String password;
 	@Column(name = "userMobile")
 	private String mobile;
-	@Column(name = "registrationDate")
+	@Column(name = "registrationDate" ,updatable = false)
+	@CreationTimestamp
 	private LocalDateTime registrationDate;
 	@Enumerated(EnumType.STRING)
 	@Column(name = "role")

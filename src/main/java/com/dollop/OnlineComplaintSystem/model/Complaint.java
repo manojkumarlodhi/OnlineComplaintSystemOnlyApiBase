@@ -1,7 +1,9 @@
 package com.dollop.OnlineComplaintSystem.model;
 
-import java.sql.Date;
 import java.time.LocalDateTime;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import com.dollop.OnlineComplaintSystem.enums.ComplaintStatus;
 
@@ -36,11 +38,13 @@ public class Complaint {
 	@Column(name = "description")
 	private String description;
 	@Enumerated(EnumType.STRING)
-	@Column(name = "ComplaintStatus ")
-	private ComplaintStatus status=ComplaintStatus.OPEN;
+	@Column(name = "complaintStatus")
+	private ComplaintStatus status = ComplaintStatus.OPEN;
 	@Column(name = "createdAt")
+	@CreationTimestamp
 	private LocalDateTime createdAt;
 	@Column(name="updatedAt")
+	@UpdateTimestamp
 	private LocalDateTime updatedAt;
 
 }
