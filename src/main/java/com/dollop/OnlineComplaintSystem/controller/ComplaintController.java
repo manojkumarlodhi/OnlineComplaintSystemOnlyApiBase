@@ -18,7 +18,7 @@ import com.dollop.OnlineComplaintSystem.requestDto.UpdateStatusRequestDto;
 import com.dollop.OnlineComplaintSystem.responseDto.ComplaintResponseDto;
 import com.dollop.OnlineComplaintSystem.responseUtil.ResponseUtil;
 import com.dollop.OnlineComplaintSystem.service.ComplaintService;
-import com.dollop.expensetracker.successResponse.SuccessResponse;
+import com.dollop.OnlineComplaintSystem.successResponse.SuccessResponse;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
@@ -54,7 +54,7 @@ public class ComplaintController {
 				);
 	}
 	
-	@GetMapping("{id}")
+	@GetMapping("/{id}")
 	public ResponseEntity<SuccessResponse> getComplaintById(@PathVariable Long id ,HttpServletRequest request){
 		ComplaintResponseDto response =service.getComplaintById(id);
 		

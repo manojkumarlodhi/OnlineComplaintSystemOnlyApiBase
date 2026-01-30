@@ -5,7 +5,8 @@ import java.time.LocalDateTime;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import com.dollop.expensetracker.successResponse.SuccessResponse;
+import com.dollop.OnlineComplaintSystem.successResponse.SuccessResponse;
+
 
 public class ResponseUtil {
 	public static ResponseEntity<SuccessResponse> success(

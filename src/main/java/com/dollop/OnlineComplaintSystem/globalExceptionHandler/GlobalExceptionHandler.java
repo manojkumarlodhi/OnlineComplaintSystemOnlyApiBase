@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import com.dollop.OnlineComplaintSystem.errorResponse.ErrorResponse;
 import com.dollop.OnlineComplaintSystem.exception.AccessDenied;
+import com.dollop.OnlineComplaintSystem.exception.EmailAlreadyExistsException;
+import com.dollop.OnlineComplaintSystem.exception.InvalidEmailOrPassword;
 import com.dollop.OnlineComplaintSystem.exception.JwtTokenExpiredException;
 import com.dollop.OnlineComplaintSystem.exception.ResourceNotFoundException;
 
@@ -38,10 +40,21 @@ public class GlobalExceptionHandler {
 
 		return creatError(ex, HttpStatus.NOT_FOUND, request);
 	}
-
+     
+	@ExceptionHandler(EmailAlreadyExistsException.class)
+	public ResponseEntity<ErrorResponse>handleEmailAlready(EmailAlreadyExistsException ex,HttpServletRequest request){
+		return creatError(ex, HttpStatus.CONFLICT, request);
+	}
+	
+	  
+	@ExceptionHandler(InvalidEmailOrPassword.class)
+	public ResponseEntity<ErrorResponse>handleEmailorpassword(InvalidEmailOrPassword ex,HttpServletRequest request){
+		return creatError(ex, HttpStatus.BAD_REQUEST, request);
+	}
+	
 	
 	@ExceptionHandler(AccessDenied.class)
-	public ResponseEntity<ErrorResponse>handleEmailAlready(AccessDenied ex,HttpServletRequest request){
+	public ResponseEntity<ErrorResponse>handleAccessDenied(AccessDenied ex,HttpServletRequest request){
 		return creatError(ex, HttpStatus.FORBIDDEN, request);
 	}
 	

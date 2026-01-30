@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.dollop.OnlineComplaintSystem.responseDto.UserResponseDto;
+import com.dollop.OnlineComplaintSystem.responseUtil.ResponseUtil;
 import com.dollop.OnlineComplaintSystem.service.UserService;
-import com.dollop.expensetracker.responseUtil.ResponseUtil;
-import com.dollop.expensetracker.successResponse.SuccessResponse;
+import com.dollop.OnlineComplaintSystem.successResponse.SuccessResponse;
 
 import jakarta.servlet.http.HttpServletRequest;
 

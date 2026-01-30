@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.dollop.OnlineComplaintSystem.exception.EmailAlreadyExistsException;
 import com.dollop.OnlineComplaintSystem.exception.ResourceNotFoundException;
@@ -14,7 +15,7 @@ import com.dollop.OnlineComplaintSystem.requestDto.UserRequestDto;
 import com.dollop.OnlineComplaintSystem.responseDto.UserResponseDto;
 import com.dollop.OnlineComplaintSystem.service.UserService;
 
-
+@Service
 public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserRepository repo;

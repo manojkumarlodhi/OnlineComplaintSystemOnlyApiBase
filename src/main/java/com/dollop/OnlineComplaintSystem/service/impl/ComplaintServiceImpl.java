@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.dollop.OnlineComplaintSystem.enums.Role;
 import com.dollop.OnlineComplaintSystem.exception.AccessDenied;
@@ -18,7 +19,7 @@ import com.dollop.OnlineComplaintSystem.requestDto.ComplaintRequestSDto;
 import com.dollop.OnlineComplaintSystem.requestDto.UpdateStatusRequestDto;
 import com.dollop.OnlineComplaintSystem.responseDto.ComplaintResponseDto;
 import com.dollop.OnlineComplaintSystem.service.ComplaintService;
-
+@Service
 public class ComplaintServiceImpl implements ComplaintService {
 	@Autowired
 	private UserHelper help;
